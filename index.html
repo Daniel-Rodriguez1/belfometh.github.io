@@ -7,42 +7,87 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
         <!--Stylesheet-->
         <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="user-scalable=no">
     </head>
     <body>
         <section class="container">
-            <div class="flex1">
-                <input type="date" id="date_input"/>
+            <div class="container-left-top">
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="2">Vibracion Dia:</th>
+                            <th colspan="2">Vibracion Mes:</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="2" id="vibracionDia">3</td>
+                            <td colspan="2" id="vibracionMes">1</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="9">Hermanos Gemelos</th>
+                        </tr>
+                        <tr>
+                            <th colspan="2">1</th>
+                            <th colspan="2">2</th>
+                            <th colspan="2">3</th>
+                            <th colspan="2">4</th>
+                            <th colspan="2">5</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="2">6</td>
+                            <td colspan="2">7</td>
+                            <td colspan="2">8</td>
+                            <td colspan="2">9</td>
+                            <td colspan="2">0</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            <div class="flex1"></div>
+            <div class="flex-picker">
+                <input
+                    type="date"
+                    id="date_input"
+                    placeholder="DD/MM/YYYY"
+                />
+            </div>
         </section>
         <section class="container first">
             <div class="cruz">
                 <div class="square"></div>
                 <div>
-                    <span class="top-balls ball-one">1</span>
-                    <span class="top-balls ball-two">2</span>
-                    <span class="top-balls ball-three">3</span>
-                    <span class="top-balls ball-four">4</span>
-                    <span class="top-balls ball-five">5</span>
-                    <span class="top-balls ball-six">6</span>
-                    <span class="top-balls ball-seven">7</span>
-                    <span class="top-balls ball-eight">8</span>
+                    <span class="top-balls ball-one" id="ballOne">X</span>
+                    <span class="top-balls ball-two" id="ballTwo">X</span>
+                    <span class="top-balls ball-three" id="ballThree">X</span>
+                    <span class="top-balls ball-four" id="ballFour">X</span>
+                    <span class="top-balls ball-five" id="ballFive">X</span>
+                    <span class="top-balls ball-six" id="ballSix">X</span>
+                    <span class="top-balls ball-seven" id="ballSeven">X</span>
+                    <span class="top-balls ball-eight" id="ballEight">X</span>
                 </div>
             </div>
             <div class="numeros">
                 <div class="numeros-label">
-                    <label for="">Ingresar número</label>
-                    <input type="text" class="numeros-input">
+                    <input type="text" class="numeros-input" id="numeros_input" placeholder="INGRESE UN NUMERO">
                 </div>
                 <div class="container">
                     <div class="cuadros flex1">
-                        <span class="top-balls">1</span>
+                        <span class="balls" id="1">X</span>
+                        <span class="balls" id="2">X</span>
                     </div>
                     <div class="cuadros flex1">
-                        <span class="top-balls">1</span>
+                        <span class="balls" id="3">X</span>
+                        <span class="balls" id="4">X</span>
                     </div>
                     <div class="cuadros flex1">
-                        <span class="top-balls">1</span>
+                        <span class="balls" id="5">X</span>
+                        <span class="balls" id="6">X</span>
                     </div>
                 </div>
                 

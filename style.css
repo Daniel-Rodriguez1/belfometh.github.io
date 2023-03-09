@@ -11,20 +11,20 @@ body {
     margin: 0;
     box-sizing: border-box;
 }
-input[type="date"]{
-    background-color: #0080ff;
+#date_input {
+    background-color: black;
     padding: 15px;
-    position: absolute;
     margin: 20px;
     font-family: "Roboto Mono",monospace;
     color: #ffffff;
-    font-size: 26px;
+    font-size: 45px;
     border: none;
     outline: none;
     border-radius: 5px;
     z-index: 99;
+    max-width: 385px;
 }
-::-webkit-calendar-picker-indicator{
+::-webkit-calendar-picker-indicator {
     background-color: #ffffff;
     padding: 5px;
     cursor: pointer;
@@ -35,6 +35,7 @@ input[type="date"]{
     display: flex;
     width: 100%;
     min-height: 106px;
+    flex-wrap: wrap;
 }
 .container.first {
     margin: 20px;
@@ -42,93 +43,160 @@ input[type="date"]{
 .cruz {
     flex: 1;
     position: relative;
+    max-width: 600px;
+    margin: 0 auto;
 }
 .flex1{
     flex: 1;
 }
 .numeros {
     flex: 1;
+    min-width: 800px;
+    z-index: 2;
 }
 .square {
-    height: 400px;
-    width: 400px;
+    height: 600px;
+    width: 600px;
     background-color: black;
     border-radius: 5px;
     position: relative;
-    margin: 20px 0px;
+    margin: 20px auto;
 }
 .square:after {
     position: absolute;
     content: "\d7";
-    font-size: 478px;
+    font-size: 800px;
     color: #FFF;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    height: 300px;
-    line-height: 240px;
+    height: 365px;
+    z-index: 0;
+    line-height: 275px;
 }
 .top-balls {
     position: absolute;
     color: white;
-    font-size: 36px;
+    font-size: 60px;
     background: orange;
-    width: 48px;
+    width: 75px;
     text-align: center;
     border-radius: 50%;
 }
 
 .ball-one {
-    top: 72px;
-    left: 66px;
+    top: 85px;
+    left: 85px;
 }
 .ball-two {
-    top: 110px;
-    left: 180px;
+    top: 150px;
+    left: 270px;
     background: green;
 }
 .ball-three {
-    top: 72px;
-    left: 290px;
+    top: 85px;
+    left: 455px;
 }
 .ball-four {
-    top: 194px;
-    left: 100px;
+    top: 280px;
+    left: 150px;
     background: green;
 }
 .ball-five {
-    top: 194px;
-    left: 256px;
+    top: 275px;
+    left: 395px;
     background: green;
 }
 .ball-six {
-    top: 305px;
-    left: 66px;
+    top: 475px;
+    left: 85px;
 }
 .ball-seven {
-    top: 272px;
-    left: 180px;
+    top: 415px;
+    left: 275px;
     background: green;
 }
 .ball-eight {
-    top: 305px;
-    left: 292px;
+    top: 470px;
+    left: 465px;
 }
-.numeros-label{
+.numeros-label {
     margin: 10px;
 }
-.numeros-input{
+.numeros-input {
     border: 1px solid;
     padding: 10px;
-    box-shadow: 5px 5px rgb(16, 164, 255);
+    box-shadow: 5px 5px black;
+    border-radius: 5px;
+    width: 580px;
+    height: 60px;
+    font-size: 50px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 25px;
+    display: block;
+    margin-bottom: 40px;
 }
-.cuadros{
+.cuadros {
     border: 1px solid;
+    border-radius: 5px;
     padding: 10px;
-    box-shadow: 5px 5px rgb(210, 3, 76);
+    box-shadow: 5px 5px black;
     margin: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 5px;
+}
+
+.cuadros .balls {
+    color: white;
+    font-size: 60px;
+    background: orange;
+    width: 75px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.container-left-top {
+    display: flex;
+    gap: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    padding: 0 20px;
+    width: 100%;
+    margin: 20px 0px;
+}
+.container-left-top span {
+    max-width: 110px;
+}
+
+table {
+    flex: 1;
+    text-transform: uppercase;
+}
+
+table,
+td {
+    border: 1px solid #333;
+    font-size: 33px;
+    font-weight: bold;
+}
+
+thead,
+tfoot {
+    background-color: black;
+    color: #fff;
+}
+
+.flex-picker {
+    display: flex;
+    min-height: 156px;
+    justify-content: center;
+    width: 100%;
+    margin-top: 45px;
 }
